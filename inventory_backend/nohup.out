@@ -1,0 +1,43 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.4.12)
+
+2025-11-27T17:48:56.884+03:00  INFO 19722 --- [inventory] [           main] c.e.inventory.InventoryApplication       : Starting InventoryApplication v0.0.1-SNAPSHOT using Java 22.0.1 with PID 19722 (/Users/john/Documents/inventory/target/inventory-0.0.1-SNAPSHOT.jar started by macbookpro2017 in /Users/john/Documents/inventory)
+2025-11-27T17:48:56.892+03:00  INFO 19722 --- [inventory] [           main] c.e.inventory.InventoryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-11-27T17:48:59.297+03:00  INFO 19722 --- [inventory] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-27T17:48:59.442+03:00  INFO 19722 --- [inventory] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 4 JPA repository interfaces.
+2025-11-27T17:49:00.789+03:00  INFO 19722 --- [inventory] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-27T17:49:00.853+03:00  INFO 19722 --- [inventory] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-27T17:49:00.853+03:00  INFO 19722 --- [inventory] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-27T17:49:00.949+03:00  INFO 19722 --- [inventory] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-27T17:49:00.952+03:00  INFO 19722 --- [inventory] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3922 ms
+2025-11-27T17:49:01.356+03:00  INFO 19722 --- [inventory] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-27T17:49:01.463+03:00  INFO 19722 --- [inventory] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2025-11-27T17:49:01.523+03:00  INFO 19722 --- [inventory] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-27T17:49:02.316+03:00  INFO 19722 --- [inventory] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-27T17:49:02.359+03:00  INFO 19722 --- [inventory] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-27T17:49:02.666+03:00  INFO 19722 --- [inventory] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@656ec00d
+2025-11-27T17:49:02.668+03:00  INFO 19722 --- [inventory] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-27T17:49:02.868+03:00  INFO 19722 --- [inventory] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-27T17:49:07.720+03:00  INFO 19722 --- [inventory] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-27T17:49:08.189+03:00  INFO 19722 --- [inventory] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-27T17:49:09.499+03:00  WARN 19722 --- [inventory] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-27T17:49:09.580+03:00  INFO 19722 --- [inventory] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-27T17:49:11.500+03:00  INFO 19722 --- [inventory] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-27T17:49:11.523+03:00  INFO 19722 --- [inventory] [           main] c.e.inventory.InventoryApplication       : Started InventoryApplication in 16.057 seconds (process running for 17.354)
+2025-11-27T17:51:03.370+03:00  INFO 19722 --- [inventory] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-27T17:51:03.381+03:00  INFO 19722 --- [inventory] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-27T17:51:03.476+03:00  INFO 19722 --- [inventory] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 93 ms

@@ -1,0 +1,5726 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< com.example:inventory_backend >--------------------
+[INFO] Building inventory_backend 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.12:run (default-cli) > test-compile @ inventory_backend >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ inventory_backend ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ inventory_backend ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 25 source files with javac [debug release 17] to target/classes
+[WARNING] /Users/john/Downloads/inventory/inventory_backend/src/main/java/com/example/inventory/config/SecurityConfig.java:[42,17] frameOptions() in org.springframework.security.config.annotation.web.configurers.HeadersConfigurer has been deprecated and marked for removal
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ inventory_backend ---
+[INFO] skip non existing resourceDirectory /Users/john/Downloads/inventory/inventory_backend/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ inventory_backend ---
+[INFO] Changes detected - recompiling the module! :dependency
+[INFO] Compiling 1 source file with javac [debug release 17] to target/test-classes
+[INFO] 
+[INFO] <<< spring-boot:3.4.12:run (default-cli) < test-compile @ inventory_backend <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.12:run (default-cli) @ inventory_backend ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.4.12)
+
+2025-11-30T04:21:46.336+03:00  INFO 57645 --- [inventory] [           main] c.e.inventory.InventoryApplication       : Starting InventoryApplication using Java 22.0.1 with PID 57645 (/Users/john/Downloads/inventory/inventory_backend/target/classes started by macbookpro2017 in /Users/john/Downloads/inventory/inventory_backend)
+2025-11-30T04:21:46.341+03:00  INFO 57645 --- [inventory] [           main] c.e.inventory.InventoryApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-11-30T04:21:48.216+03:00  INFO 57645 --- [inventory] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-30T04:21:48.475+03:00  INFO 57645 --- [inventory] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 224 ms. Found 4 JPA repository interfaces.
+2025-11-30T04:21:50.766+03:00  INFO 57645 --- [inventory] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-11-30T04:21:50.802+03:00  INFO 57645 --- [inventory] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-30T04:21:50.803+03:00  INFO 57645 --- [inventory] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.49]
+2025-11-30T04:21:50.929+03:00  INFO 57645 --- [inventory] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-30T04:21:50.934+03:00  INFO 57645 --- [inventory] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4512 ms
+2025-11-30T04:21:51.299+03:00  INFO 57645 --- [inventory] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-30T04:21:51.495+03:00  INFO 57645 --- [inventory] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.36.Final
+2025-11-30T04:21:51.854+03:00  INFO 57645 --- [inventory] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-30T04:21:53.115+03:00  INFO 57645 --- [inventory] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-30T04:21:53.178+03:00  INFO 57645 --- [inventory] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-30T04:21:53.638+03:00  INFO 57645 --- [inventory] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6c96403e
+2025-11-30T04:21:53.640+03:00  INFO 57645 --- [inventory] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-30T04:21:53.818+03:00  INFO 57645 --- [inventory] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.8
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-30T04:21:57.258+03:00  INFO 57645 --- [inventory] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-30T04:21:57.484+03:00  INFO 57645 --- [inventory] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-30T04:21:58.838+03:00  WARN 57645 --- [inventory] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-30T04:21:58.918+03:00  INFO 57645 --- [inventory] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-11-30T04:22:00.371+03:00  INFO 57645 --- [inventory] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-11-30T04:22:00.398+03:00  INFO 57645 --- [inventory] [           main] c.e.inventory.InventoryApplication       : Started InventoryApplication in 15.916 seconds (process running for 17.264)
+Hibernate: 
+    select
+        count(*) 
+    from
+        products p1_0
+ℹ️  Products already exist, skipping seed
+2025-11-30T04:22:06.719+03:00  INFO 57645 --- [inventory] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-30T04:22:06.769+03:00  INFO 57645 --- [inventory] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-30T04:22:06.772+03:00  INFO 57645 --- [inventory] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (product_id, quantity, timestamp, user_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (product_id, quantity, timestamp, user_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (product_id, quantity, timestamp, user_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    insert 
+    into
+        orders
+        (product_id, quantity, timestamp, user_id) 
+    values
+        (?, ?, ?, ?)
+Hibernate: 
+    update
+        products 
+    set
+        category=?,
+        description=?,
+        image_url=?,
+        name=?,
+        price=?,
+        sku_id=?,
+        stock_level=? 
+    where
+        product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        oe1_0.order_id,
+        oe1_0.product_id,
+        oe1_0.quantity,
+        oe1_0.timestamp,
+        oe1_0.user_id 
+    from
+        orders oe1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0 
+    where
+        p1_0.product_id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.password_hash,
+        u1_0.role,
+        u1_0.username 
+    from
+        users u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+Hibernate: 
+    select
+        p1_0.product_id,
+        p1_0.category,
+        p1_0.description,
+        p1_0.image_url,
+        p1_0.name,
+        p1_0.price,
+        p1_0.sku_id,
+        p1_0.stock_level 
+    from
+        products p1_0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:43 h
+[INFO] Finished at: 2025-11-30T07:04:48+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:3.4.12:run (default-cli) on project inventory_backend: Process terminated with exit code: 137 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
