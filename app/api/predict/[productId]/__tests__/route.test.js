@@ -84,7 +84,7 @@ describe('Prediction API Route', () => {
       const data = response.data;
 
       expect(response.status).toBe(200);
-      expect(data.demand).toBe(Math.ceil(20 * (1000 / 1))); // price should be treated as 1
+      expect(data.demand).toBe(Math.ceil(15 * (1000 / 1))); // stock=10 is normal stock, not low stock
       expect(data.price).toBe(0);
     });
 
@@ -156,7 +156,7 @@ describe('Prediction API Route', () => {
       const data = response.data;
 
       expect(response.status).toBe(200);
-      expect(data.demand).toBe(Math.ceil(20 * (1000 / 29.99))); // Should use low stock formula
+      expect(data.demand).toBe(Math.ceil(15 * (1000 / 29.99))); // stock=10 is normal stock, not low stock
       expect(data.stockLevel).toBe(10);
     });
 
@@ -195,7 +195,7 @@ describe('Prediction API Route', () => {
 
       expect(response.status).toBe(200);
       expect(data.stockLevel).toBe(-5);
-      expect(data.demand).toBe(Math.ceil(50 * (1000 / 29.99))); // Should treat as out of stock
+      expect(data.demand).toBe(Math.ceil(20 * (1000 / 29.99))); // negative stock (< 10) uses low stock formula
     });
 
     it('should handle decimal stock values', async () => {

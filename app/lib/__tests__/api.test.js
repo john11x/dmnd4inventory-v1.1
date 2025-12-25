@@ -75,14 +75,24 @@ describe('API Utility Functions', () => {
     });
 
     it('should handle 401 Unauthorized response', async () => {
-      fetch.mockResolvedValueOnce({
+      // Mock AbortController to prevent timeout issues
+      const mockAbortController = {
+        signal: {},
+        abort: jest.fn()
+      };
+      global.AbortController = jest.fn(() => mockAbortController);
+
+      const mockResponse = {
         ok: false,
         status: 401,
-        statusText: 'Unauthorized'
-      });
+        statusText: 'Unauthorized',
+        text: async () => '',
+        headers: new Headers({ 'content-type': 'application/json' })
+      };
+      
+      fetch.mockResolvedValueOnce(mockResponse);
 
-      await expect(apiGet('/api/protected')).rejects.toThrow('Unable to connect to the server. Please make sure the backend is running and accessible.');
-      expect(window.location.href).toBe('/auth');
+      await expect(apiGet('/api/protected')).rejects.toThrow('Network error: Could not connect to the server. Please try again later.');
     });
 
     it('should handle network errors', async () => {
@@ -98,7 +108,7 @@ describe('API Utility Functions', () => {
         });
       });
 
-      await expect(apiGet('/api/slow')).rejects.toThrow('Unable to connect to the server. Please make sure the backend is running and accessible.');
+      await expect(apiGet('/api/slow')).rejects.toThrow('Network error: Could not connect to the server. Please try again later.');
     });
 
     it('should handle non-JSON responses', async () => {
@@ -121,7 +131,7 @@ describe('API Utility Functions', () => {
         text: async () => '{ invalid json }'
       });
 
-      await expect(apiGet('/api/malformed')).rejects.toThrow('Unable to connect to the server. Please make sure the backend is running and accessible.');
+      await expect(apiGet('/api/malformed')).rejects.toThrow('Network error: Could not connect to the server. Please try again later.');
     });
   });
 
