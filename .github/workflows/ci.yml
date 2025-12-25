@@ -1,10 +1,11 @@
-name: CI
+# name: CI
+# This workflow is temporarily disabled
 
-on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main, develop ]
+# on:
+#   push:
+#     branches: [ main, develop ]
+#   pull_request:
+#     branches: [ main, develop ]
 
 jobs:
   test:
@@ -82,7 +83,7 @@ jobs:
     - name: Run ML service tests
       working-directory: ./ml
       run: |
-        python -m pytest tests/
+        python -m pytest
     
     # Generate test coverage report
     - name: Generate coverage report

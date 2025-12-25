@@ -123,8 +123,8 @@
 
 ### Horizontal Scaling
 - Stateless architecture
-- Containerized deployment with Docker
-- Kubernetes orchestration
+- Cloud-native deployment
+- Load balancer configuration
 
 ### Database Scaling
 - Read replicas for reporting

@@ -1,9 +1,10 @@
 <div align="center">
   <h1>Inventory Management System with ML Predictions</h1>
   <p>
-    <a href="https://github.com/john11x/dmnd4inventory-v1.1/actions">
+    <!-- CI Status Badge - Temporarily Disabled -->
+    <!-- <a href="https://github.com/john11x/dmnd4inventory-v1.1/actions">
       <img src="https://github.com/john11x/dmnd4inventory-v1.1/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
-    </a>
+    </a> -->
     <a href="https://codecov.io/gh/john11x/dmnd4inventory-v1.1">
       <img src="https://codecov.io/gh/john11x/dmnd4inventory-v1.1/branch/main/graph/badge.svg" alt="Code Coverage" />
     </a>
@@ -78,8 +79,7 @@ A modern, full-stack inventory management system that leverages machine learning
 - **API Documentation**: Swagger UI + ReDoc
 
 ### DevOps
-- **CI/CD**: GitHub Actions
-- **Containerization**: Docker + Docker Compose
+- **CI/CD**: GitHub Actions (temporarily disabled)
 - **Monitoring**: Prometheus + Grafana
 - **Logging**: ELK Stack (Elasticsearch, Logstash, Kibana)
 - **Infrastructure as Code**: Terraform
@@ -168,7 +168,6 @@ inventory/
 - **Python** 3.10+
 - **PostgreSQL** 14+
 - **Maven** 3.8+
-- **Docker** 20.10+ (for containerized development)
 - **npm** 9+ or **yarn** 1.22+
 
 ### Installation
@@ -181,19 +180,13 @@ cd dmnd4inventory-v1.1
 
 #### 2. Environment Setup
 ```bash
-# Copy example environment files
-cp .env.example .env
-cp app/.env.local.example app/.env.local
-cp inventory_backend/src/main/resources/application.example.properties \
-   inventory_backend/src/main/resources/application-dev.properties
+# Create environment files from the existing configurations
+cp .env.local .env.example
+cp inventory_backend/src/main/resources/application.properties \
+   inventory_backend/src/main/resources/application.example.properties
 ```
 
-#### 3. Start with Docker (Recommended)
-```bash
-docker-compose up -d
-```
-
-#### Manual Setup
+#### 3. Manual Setup
 
 ##### Frontend
 ```bash
@@ -213,8 +206,8 @@ cd inventory_backend
 cd ml
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn src.api.main:app --reload  # Starts on http://localhost:8000
+pip install -r ../requirements-predict.txt
+uvicorn predict_service:app --reload  # Starts on http://localhost:8000
 ```
 
 ### Testing
@@ -231,6 +224,9 @@ npm run test:integration
 
 # E2E tests
 npm run test:e2e
+
+# ML service tests
+cd ml && python -m pytest
 ```
 
 #### Test Coverage
@@ -282,6 +278,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
   <p>
     <a href="mailto:johnaobowu@gmail.com">Email</a> • 
     <a href="https://github.com/john11x">GitHub</a> • 
-    <a href="https://linkedin.com/in/johnobowu">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/john-jr-obowu">LinkedIn</a>
   </p>
 </div>
