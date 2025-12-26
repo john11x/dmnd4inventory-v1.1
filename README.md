@@ -5,52 +5,29 @@
     <!-- <a href="https://github.com/john11x/dmnd4inventory-v1.1/actions">
       <img src="https://github.com/john11x/dmnd4inventory-v1.1/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
     </a> -->
-    <a href="https://codecov.io/gh/john11x/dmnd4inventory-v1.1">
-      <img src="https://codecov.io/gh/john11x/dmnd4inventory-v1.1/branch/main/graph/badge.svg" alt="Code Coverage" />
-    </a>
-    <a href="https://github.com/john11x/dmnd4inventory-v1.1/blob/main/LICENSE">
-      <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" />
-    </a>
-  </p>
-  <p>
-    <img src="https://img.shields.io/badge/Java-17-blue" alt="Java 17" />
-    <img src="https://img.shields.io/badge/Spring%20Boot-3.4-brightgreen" alt="Spring Boot 3.4" />
-    <img src="https://img.shields.io/badge/Next.js-14-black" alt="Next.js 14" />
-    <img src="https://img.shields.io/badge/React-18-61DAFB" alt="React 18" />
-    <img src="https://img.shields.io/badge/Python-3.10-yellow" alt="Python 3.10" />
-    <img src="https://img.shields.io/badge/FastAPI-0.95-009688" alt="FastAPI" />
   </p>
 </div>
 
 ## Overview
 
-A modern, full-stack inventory management system that leverages machine learning for demand forecasting and inventory optimization. Built with a microservices architecture, it provides real-time analytics, automated reordering, and intelligent stock management capabilities.
+A modern, full-stack inventory management system that leverages machine learning for demand forecasting. Built with a microservices architecture, it provides analytics and intelligent stock management capabilities.
 
 ### Key Features
 
 - **Intelligent Inventory Management**
   - ML-powered demand forecasting
-  - Automated reorder point calculation
   - Real-time stock level monitoring
-  - Batch/lot tracking with expiry alerts
 
 - **Advanced Analytics**
-  - Interactive dashboards with Recharts
+  - Interactive dashboards
   - Sales trend analysis
-  - Inventory turnover metrics
-  - Product performance insights
 
 - **Security & Access Control**
-  - JWT-based authentication
   - Role-based access control (RBAC)
   - Secure API endpoints
-  - Audit logging
 
 - **Multi-User Collaboration**
-  - Real-time updates
-  - Activity feed
   - User permission management
-  - Team collaboration tools
 
 ## Technical Stack
 
@@ -75,35 +52,12 @@ A modern, full-stack inventory management system that leverages machine learning
 - **ML Libraries**: scikit-learn, numpy
 - **Async Support**: Python 3.10+
 - **Model Persistence**: joblib
-- **API Documentation**: Swagger UI + ReDoc
+- **API Documentation**: Built-in FastAPI docs (Swagger UI + ReDoc)
 
 ### DevOps
 - **CI/CD**: GitHub Actions (configured but currently disabled)
 - **Version Control**: Git with GitHub
 - **Package Management**: Maven (Java), npm (Node.js), pip (Python)
-
-## Tech Stack
-
-### Frontend
-- **Framework**: Next.js 16 (App Router)
-- **UI**: Tailwind CSS 4
-- **State**: React Context + Hooks
-- **Charts**: Recharts, Chart.js
-- **Testing**: Jest, React Testing Library
-
-### Backend (Spring Boot)
-- **Language**: Java 17
-- **Framework**: Spring Boot 3.4.12
-- **Security**: Spring Security + JWT
-- **Database**: PostgreSQL
-- **ORM**: Hibernate/JPA
-- **API**: RESTful endpoints
-
-### ML Service (FastAPI)
-- **Framework**: FastAPI
-- **ML Library**: scikit-learn
-- **Model Persistence**: joblib
-- **API**: Async REST endpoints
 
 ## Project Structure
 ```
@@ -231,38 +185,6 @@ npm run test:coverage
 - [ML Service Docs](http://localhost:8000/docs)
 - [Design Document](DESIGN.md)
 
-## Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Team
-
-- **John Obowu** - [@john11x](https://github.com/john11x)
-
-## Acknowledgments
-
-- [Spring Boot](https://spring.io/projects/spring-boot) - For the amazing backend framework
-- [Next.js](https://nextjs.org/) - For the React framework
-- [FastAPI](https://fastapi.tiangolo.com/) - For the ML service API
-- [Tailwind CSS](https://tailwindcss.com/) - For utility-first CSS
-
----
-
-<div align="center">
-  <p>Developed by John Obowu</p>
-  <p>
-    <a href="mailto:johnaobowu@gmail.com">Email</a> • 
-    <a href="https://github.com/john11x">GitHub</a> • 
-    <a href="https://www.linkedin.com/in/john-jr-obowu">LinkedIn</a>
-  </p>
-</div>
