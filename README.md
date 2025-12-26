@@ -62,54 +62,146 @@ A modern, full-stack inventory management system that leverages machine learning
 ## Project Structure
 ```
 inventory/
-├── .github/                 # GitHub workflows and templates
-│   └── workflows/           # CI/CD pipelines
-│
-├── app/                     # Next.js frontend application
-│   ├── admin/               # Admin-specific views and components
-│   ├── api/                 # API route handlers (Next.js API routes)
-│   ├── components/          # Reusable React components
-│   │   ├── common/          # Shared UI components
-│   │   ├── dashboard/       # Dashboard-specific components
-│   │   └── forms/           # Form components with validation
-│   ├── context/             # React context providers
-│   ├── hooks/               # Custom React hooks
-│   ├── lib/                 # Utility functions and helpers
-│   ├── pages/               # Next.js pages
-│   ├── public/              # Static assets
-│   └── styles/              # Global styles and themes
-│
-├── inventory_backend/       # Spring Boot backend
-│   └── src/main/java/com/example/inventory/
-│       ├── config/          # Spring configuration classes
-│       ├── controller/      # REST API controllers
-│       ├── dto/             # Data Transfer Objects
-│       ├── exception/       # Exception handling
-│       ├── model/           # JPA entities
-│       ├── repository/      # Spring Data repositories
-│       ├── security/        # Security configuration
-│       ├── service/         # Business logic layer
-│       └── util/            # Utility classes
-│
-├── ml/                      # ML service
-│   ├── data/                # Training datasets
-│   ├── models/              # Trained model files
-│   ├── notebooks/           # Jupyter notebooks for EDA and training
-│   ├── src/                 # Source code
-│   │   ├── api/             # FastAPI application
-│   │   ├── core/            # Core ML logic
-│   │   └── services/        # Business logic
-│   └── tests/               # Test suite
-│
-├── docs/                    # Project documentation
-│   ├── api/                 # API documentation
-│   ├── architecture/        # System architecture diagrams
-│   └── guides/              # User and developer guides
-│
-└── tests/                   # Global test configurations
-    ├── e2e/                 # End-to-end tests
-    ├── integration/         # Integration tests
-    └── unit/                # Unit tests
+├── DESIGN.md                    # Design documentation
+├── eslint.config.mjs            # ESLint configuration
+├── jest.config.js               # Jest testing configuration
+├── jest.setup.js                # Jest setup file
+├── jsconfig.json                # JavaScript configuration
+├── LICENSE                      # Project license
+├── middleware.js                # Next.js middleware
+├── next.config.mjs              # Next.js configuration
+├── package.json                 # Node.js dependencies and scripts
+├── postcss.config.mjs           # PostCSS configuration
+├── predict_service.py           # Python prediction service
+├── README-PREDICT.md            # Prediction service README
+├── README.md                    # Main project README
+├── requirements-predict.txt     # Python dependencies for prediction
+├── run_predict.sh               # Script to run prediction service
+├── __tests__/                   # Test suite
+│   ├── demonstration/           # Demonstration tests
+│   │   └── technical-test.js
+│   ├── integration/             # Integration tests
+│   │   └── user-home-workflow.test.js
+│   ├── performance/             # Performance tests
+│   │   └── performance.test.js
+│   ├── unit/                    # Unit tests
+│   │   ├── error-boundary.test.js
+│   │   └── inventory-utils.test.js
+│   └── utils/                   # Test utilities
+│       └── advancedTesting.js
+├── app/                         # Next.js frontend application
+│   ├── globals.css              # Global CSS styles
+│   ├── layout.js                # Root layout
+│   ├── page.js                  # Home page
+│   ├── admin/                   # Admin pages
+│   │   ├── layout.js
+│   │   ├── page.js
+│   │   ├── dashboard/
+│   │   │   └── page.js
+│   │   ├── inventory/
+│   │   │   └── page.js
+│   │   ├── login/
+│   │   │   └── page.js
+│   │   ├── orders/
+│   │   │   └── page.js
+│   │   └── products/
+│   │       ├── page.js
+│   │       ├── [id]/
+│   │       └── create/
+│   ├── api/                     # API routes
+│   │   ├── orders/
+│   │   │   ├── route.js
+│   │   │   └── __tests__/
+│   │   ├── predict/
+│   │   │   ├── route.js
+│   │   │   └── [productId]/
+│   │   ├── products/
+│   │   │   └── [id]/
+│   │   ├── stream/
+│   │   │   └── route.js
+│   │   └── test-predict/
+│   │       └── route.js
+│   ├── auth/                    # Authentication pages
+│   │   └── page.js
+│   ├── components/              # React components
+│   │   ├── AdminSidebar.jsx
+│   │   ├── ErrorBoundary.js
+│   │   ├── Header.jsx
+│   │   ├── InventoryPieChart.jsx
+│   │   ├── LoadingSpinner.jsx
+│   │   ├── LogoutButton.jsx
+│   │   ├── LowStockAlert.jsx
+│   │   ├── ModelInfoPanel.jsx
+│   │   ├── Navbar.js
+│   │   ├── OrderForm.jsx
+│   │   ├── ProductCard.js
+│   │   ├── ProductCard.jsx
+│   │   ├── ProductList.jsx
+│   │   ├── ProductSearch.jsx
+│   │   ├── ProtectedClient.jsx
+│   │   ├── StatsCard.jsx
+│   │   ├── StockOptimizerPanel.jsx
+│   │   ├── VirtualizedProductList.jsx
+│   │   ├── __tests__/
+│   │   │   └── Navbar.test.js
+│   │   │   └── ...
+│   │   └── charts/
+│   ├── hooks/                   # Custom React hooks
+│   │   ├── useProductOptimization.js
+│   │   └── useWebSocket.js
+│   ├── lib/                     # Utility libraries
+│   │   ├── api.js
+│   │   └── __tests__/
+│   ├── login/                   # Login page
+│   │   └── page.js
+│   ├── products/                # Products page
+│   │   └── page.js
+│   ├── providers/               # Context providers
+│   │   ├── AuthProvider.jsx
+│   │   └── RealtimeProvider.jsx
+│   └── user/                    # User pages
+│       ├── home/
+│       ├── order/
+│       └── product/
+├── build/                       # Build artifacts
+│   └── dev/                     # Development build
+│       ├── build-manifest.json
+│       ├── fallback-build-manifest.json
+│       ├── package.json
+│       ├── prerender-manifest.json
+│       ├── routes-manifest.json
+│       ├── trace
+│       └── build/
+│       └── cache/
+│       └── logs/
+│       └── server/
+│       └── static/
+│       └── types/
+├── inventory_backend/           # Spring Boot backend
+│   ├── HELP.md                  # Backend help documentation
+│   ├── mvnw                     # Maven wrapper for Unix
+│   ├── mvnw.cmd                 # Maven wrapper for Windows
+│   ├── pom.xml                  # Maven project configuration
+│   ├── src/                     # Source code
+│   │   ├── main/                # Main source
+│   │   └── test/                # Test source
+│   └── target/                  # Build output
+│       ├── inventory_backend-0.0.1-SNAPSHOT.jar.original
+│       ├── classes/
+│       ├── generated-sources/
+│       ├── generated-test-sources/
+│       ├── maven-archiver/
+│       ├── maven-status/
+│       └── test-classes/
+├── ml/                          # Machine learning service
+│   ├── BuildData.py             # Data building script
+│   ├── demand_model.joblib      # Trained demand model
+│   ├── feature_importance.py    # Feature importance analysis
+│   ├── Inventory_ML.ipynb       # Jupyter notebook for ML
+│   └── predict.py               # Prediction script
+├── public/                      # Static assets
+└── scripts/                     # Utility scripts
+    └── repackage_model.py       # Model repackaging script
 ```
 ## Getting Started
 
