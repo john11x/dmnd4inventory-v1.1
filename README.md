@@ -47,7 +47,7 @@ A modern, full-stack inventory management system that leverages machine learning
   - Audit logging
 
 - **Multi-User Collaboration**
-  - Real-time updates with WebSockets
+  - Real-time updates
   - Activity feed
   - User permission management
   - Team collaboration tools
@@ -55,47 +55,45 @@ A modern, full-stack inventory management system that leverages machine learning
 ## Technical Stack
 
 ### Frontend
-- **Framework**: Next.js 14 (App Router) with React 18
+- **Framework**: Next.js 16 (App Router) with React 19
 - **State Management**: React Context API + Hooks
-- **Styling**: Tailwind CSS + Headless UI
-- **Data Visualization**: Recharts
-- **Testing**: Jest, React Testing Library, Cypress E2E
-- **Build Tool**: Vite
+- **Styling**: Tailwind CSS 4
+- **Data Visualization**: Recharts, Chart.js
+- **Testing**: Jest, React Testing Library
+- **Build Tool**: Next.js built-in bundler
 
 ### Backend (Spring Boot)
 - **Language**: Java 17
-- **Framework**: Spring Boot 3.4
+- **Framework**: Spring Boot 3.4.12
 - **Security**: Spring Security 6.1 + JWT
 - **Database**: PostgreSQL 14+
 - **ORM**: Hibernate 6.4 + JPA 3.1
-- **API Documentation**: SpringDoc OpenAPI 3.0
-- **Testing**: JUnit 5, Mockito, Testcontainers
+- **Testing**: JUnit 5, Mockito
 
 ### ML Service (FastAPI)
-- **Framework**: FastAPI 0.95+
-- **ML Libraries**: scikit-learn, pandas, numpy
+- **Framework**: FastAPI
+- **ML Libraries**: scikit-learn, numpy
 - **Async Support**: Python 3.10+
-- **Model Serving**: ONNX Runtime
+- **Model Persistence**: joblib
 - **API Documentation**: Swagger UI + ReDoc
 
 ### DevOps
-- **CI/CD**: GitHub Actions (temporarily disabled)
-- **Monitoring**: Prometheus + Grafana
-- **Logging**: ELK Stack (Elasticsearch, Logstash, Kibana)
-- **Infrastructure as Code**: Terraform
+- **CI/CD**: GitHub Actions (configured but currently disabled)
+- **Version Control**: Git with GitHub
+- **Package Management**: Maven (Java), npm (Node.js), pip (Python)
 
 ## Tech Stack
 
 ### Frontend
-- **Framework**: Next.js 14 (App Router)
-- **UI**: Tailwind CSS + Headless UI
+- **Framework**: Next.js 16 (App Router)
+- **UI**: Tailwind CSS 4
 - **State**: React Context + Hooks
-- **Charts**: Recharts
+- **Charts**: Recharts, Chart.js
 - **Testing**: Jest, React Testing Library
 
 ### Backend (Spring Boot)
 - **Language**: Java 17
-- **Framework**: Spring Boot 3.4
+- **Framework**: Spring Boot 3.4.12
 - **Security**: Spring Security + JWT
 - **Database**: PostgreSQL
 - **ORM**: Hibernate/JPA
@@ -218,13 +216,6 @@ uvicorn predict_service:app --reload  # Starts on http://localhost:8000
 npm test
 ./mvnw test
 
-# Integration tests
-npm run test:integration
-./mvnw test -Pintegration
-
-# E2E tests
-npm run test:e2e
-
 # ML service tests
 cd ml && python -m pytest
 ```
@@ -233,18 +224,12 @@ cd ml && python -m pytest
 ```bash
 # Frontend coverage
 npm run test:coverage
-
-# Backend coverage
-./mvnw jacoco:report
 ```
 
 ## Documentation
 
-- [API Documentation](http://localhost:8080/swagger-ui.html) (after starting backend)
 - [ML Service Docs](http://localhost:8000/docs)
-- [Architecture Decision Records](/docs/architecture/decisions/)
-- [Development Guide](/docs/guides/DEVELOPMENT.md)
-- [Testing Guide](/docs/guides/TESTING.md)
+- [Design Document](DESIGN.md)
 
 ## Contributing
 
